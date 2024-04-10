@@ -1,0 +1,429 @@
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#"
+     xml:base="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:daetika="http://www.semanticweb.org/ontologies/2024/3/daetika#"
+     xmlns:ric-rst="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/ontologies/2024/3/daetika"/>
+        <rdfs:label xml:lang="hr">Autor: Arian Rajh</rdfs:label>
+        <rdfs:label xml:lang="hr">Ontologija arhivističke deontološko-aretaičke etike</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#DASE_RULE -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#DASE_RULE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#jePovezanS -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#jePovezanS"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#dolaziOd -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#dolaziOd">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#vodiDo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#PravednoPonasanje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaKojaVodiDoPravednogPonasanja"/>
+        <rdfs:label xml:lang="hr">dolazi od</rdfs:label>
+        <rdfs:label xml:lang="en">results</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#jePovezanoS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#jePovezanoS">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaPovezanaSPravednimPonasanjem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Ponasanje"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Ponasanje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#PravednoPonasanje"/>
+        <rdfs:comment xml:lang="en">is linked to</rdfs:comment>
+        <rdfs:label xml:lang="hr">je povezano s</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#vodiDo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#vodiDo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaKojaVodiDoPravednogPonasanja"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#PravednoPonasanje"/>
+        <rdfs:comment xml:lang="en">leads to</rdfs:comment>
+        <rdfs:label xml:lang="hr">vodi do</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#zadovoljeno -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#zadovoljeno">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobina"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#PravednoPonasanje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="hr">zadovoljeno</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#zadovoljeno"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <jePovezanS xml:lang="hr">Unesite true ili false vrijednost.</jePovezanS>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Akvizicija -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Akvizicija">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak"/>
+        <rdfs:comment rdf:resource="http://www.ciscra.org/mat/mat/term/4388"/>
+        <rdfs:comment xml:lang="hr">Postupak stjecanja gradiva u arhiv ili spremište.</rdfs:comment>
+        <rdfs:label xml:lang="en">Acqusition</rdfs:label>
+        <rdfs:label xml:lang="hr">Akvizicija</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#ArhivskiOpis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#ArhivskiOpis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak"/>
+        <rdfs:comment rdf:resource="http://www.ciscra.org/mat/mat/term/4515"/>
+        <rdfs:comment xml:lang="hr">Postupak i proizvod postupka u obliku metapodataka o arhivskom gradivu ili obavijesnog pomagala.</rdfs:comment>
+        <rdfs:label xml:lang="en">Archival description</rdfs:label>
+        <rdfs:label xml:lang="hr">Arhivski opis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobina">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Osobina"/>
+        <rdfs:label xml:lang="hr">Ciljana osobina</rdfs:label>
+        <rdfs:label xml:lang="en">Virtue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaKojaVodiDoPravednogPonasanja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaKojaVodiDoPravednogPonasanja">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobina"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaPovezanaSPravednimPonasanjem"/>
+        <rdfs:label xml:lang="hr">Ciljana osobina koja vodi do pravednog ponasanja</rdfs:label>
+        <rdfs:label xml:lang="en">Virtue that leads to targeted bahavior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaPovezanaSPravednimPonasanjem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaPovezanaSPravednimPonasanjem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobina"/>
+        <rdfs:label xml:lang="hr">Ciljana osobina povezana s pravednim ponasanjem</rdfs:label>
+        <rdfs:label xml:lang="en">Virtue linked to targeted behavior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Koristenje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Koristenje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak"/>
+        <rdfs:label xml:lang="hr">Korištenje</rdfs:label>
+        <rdfs:label xml:lang="en">Usage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Osobina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Osobina">
+        <rdfs:label xml:lang="en">Characteristic</rdfs:label>
+        <rdfs:label xml:lang="hr">Osobina</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Ponasanje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Ponasanje">
+        <rdfs:label xml:lang="en">Behavior</rdfs:label>
+        <rdfs:label xml:lang="en">Ponasanje</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak">
+        <rdfs:label xml:lang="hr">Postupak</rdfs:label>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#PravednoPonasanje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#PravednoPonasanje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Ponasanje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Unistavanje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Unistavanje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak"/>
+        <rdfs:label xml:lang="en">Destruction</rdfs:label>
+        <rdfs:label xml:lang="hr">Uništavanje</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Vrednovanje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Vrednovanje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak"/>
+        <rdfs:comment rdf:resource="http://www.ciscra.org/mat/mat/term/4420"/>
+        <rdfs:comment xml:lang="hr">Vrednovanje je postupak određivanja je li gradivo, nalazilo se ono u okolini stvaratelja, arhiva ili nekoj trećoj, vrijedno ili nije vrijedno i ako jest, koliko ta vrijednost očekivano traje.</rdfs:comment>
+        <rdfs:label xml:lang="en">Appraisal</rdfs:label>
+        <rdfs:label xml:lang="hr">Vrednovanje</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Empaticnost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Empaticnost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaKojaVodiDoPravednogPonasanja"/>
+        <rdfs:comment xml:lang="hr">Osobina koja omogućuje razumijevanje pozicija Drugih.</rdfs:comment>
+        <rdfs:label xml:lang="en">Empathy</rdfs:label>
+        <rdfs:label xml:lang="hr">Empatičnost</rdfs:label>
+        <rdfs:seeAlso xml:lang="hr">Empatija</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Inkluzivnost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Inkluzivnost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaKojaVodiDoPravednogPonasanja"/>
+        <rdfs:comment xml:lang="hr">Uključivanje tema i problema važnih Drugima u svoj postupak te uključivanje Drugih u postupak, dijeljenje postupka.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inclusivity</rdfs:label>
+        <rdfs:label xml:lang="hr">Inkluzivnost</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Samorefleksivnost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Samorefleksivnost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaKojaVodiDoPravednogPonasanja"/>
+        <rdfs:comment xml:lang="hr">Dijanoetička osobina svjesnosti značaja svojih postupaka, tema i problema.</rdfs:comment>
+        <rdfs:label xml:lang="hr">Samorefleksivnost</rdfs:label>
+        <rdfs:label xml:lang="en">Self-reflexivity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Transparentnost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Transparentnost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaPovezanaSPravednimPonasanjem"/>
+        <rdfs:comment xml:lang="hr">Bilježenje postupaka i dokumentiranje, otvorenost za javnu diskusiju o postupku i ponašanju. Transparentnost rada i dokumentiranje postupaka osnova je odgovornosti i osnova za traženje legitimiteta.</rdfs:comment>
+        <rdfs:label xml:lang="en">Transparency</rdfs:label>
+        <rdfs:label xml:lang="hr">Transparentnost</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:label xml:lang="hr">Stvar</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#PravednoPonasanje"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaKojaVodiDoPravednogPonasanja"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#zadovoljeno"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:oneOf>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </owl:oneOf>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaPovezanaSPravednimPonasanjem"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#zadovoljeno"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:oneOf>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </owl:oneOf>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:nodeID="genid20"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:nodeID="genid20"/>
+        <DASE_RULE>R1___:PravednoPonasanje(?e) ^ :CiljanaOsobinaKojaVodiDoPravednogPonasanja(?a) ^ :CiljanaOsobinaKojaVodiDoPravednogPonasanja(?b) ^ :CiljanaOsobinaKojaVodiDoPravednogPonasanja(?c) ^ :CiljanaOsobinaPovezanaSPravednimPonasanjem(?d) ^ :zadovoljeno(?a, true) ^ :zadovoljeno(?b, true) ^ :zadovoljeno(?c, true) ^ :zadovoljeno(?d, true) -&gt; :zadovoljeno(?e, true)___Ako su ciljane osobine koje vode do i koje su povezane s pravednim ponašanjem zadovoljene, onda je i pravedno ponašanje zadovoljeno.___http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Restriction rdf:nodeID="genid20">
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#zadovoljeno"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Akvizicija"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#ArhivskiOpis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Koristenje"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Unistavanje"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Vrednovanje"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

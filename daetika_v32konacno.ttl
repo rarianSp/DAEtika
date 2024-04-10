@@ -1,0 +1,288 @@
+@prefix : <http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix daetika: <http://www.semanticweb.org/ontologies/2024/3/daetika#> .
+@prefix ric-rst: <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#> .
+@base <http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#> .
+
+<http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48> rdf:type owl:Ontology ;
+                                                                     owl:versionIRI <http://www.semanticweb.org/ontologies/2024/3/daetika> ;
+                                                                     rdfs:label "Autor: Arian Rajh"@hr ,
+                                                                                "Ontologija arhivističke deontološko-aretaičke etike"@hr .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#DASE_RULE
+:DASE_RULE rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#jePovezanS
+:jePovezanS rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#dolaziOd
+:dolaziOd rdf:type owl:ObjectProperty ;
+          owl:inverseOf :vodiDo ;
+          rdfs:domain :PravednoPonasanje ;
+          rdfs:range :CiljanaOsobinaKojaVodiDoPravednogPonasanja ;
+          rdfs:label "dolazi od"@hr ,
+                     "results"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#jePovezanoS
+:jePovezanoS rdf:type owl:ObjectProperty ,
+                      owl:SymmetricProperty ;
+             rdfs:domain :CiljanaOsobinaPovezanaSPravednimPonasanjem ,
+                         :Ponasanje ,
+                         :Postupak ;
+             rdfs:range :Ponasanje ,
+                        :Postupak ,
+                        :PravednoPonasanje ;
+             rdfs:comment "is linked to"@en ;
+             rdfs:label "je povezano s"@hr .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#vodiDo
+:vodiDo rdf:type owl:ObjectProperty ;
+        rdfs:domain :CiljanaOsobinaKojaVodiDoPravednogPonasanja ;
+        rdfs:range :PravednoPonasanje ;
+        rdfs:comment "leads to"@en ;
+        rdfs:label "vodi do"@hr .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#zadovoljeno
+:zadovoljeno rdf:type owl:DatatypeProperty ;
+             rdfs:domain :CiljanaOsobina ,
+                         :PravednoPonasanje ;
+             rdfs:range xsd:boolean ;
+             rdfs:label "zadovoljeno"@hr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :zadovoljeno ;
+   owl:annotatedProperty rdfs:range ;
+   owl:annotatedTarget xsd:boolean ;
+   :jePovezanS "Unesite true ili false vrijednost."@hr
+ ] .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Akvizicija
+:Akvizicija rdf:type owl:Class ;
+            rdfs:subClassOf :Postupak ;
+            rdfs:comment <http://www.ciscra.org/mat/mat/term/4388> ,
+                         "Postupak stjecanja gradiva u arhiv ili spremište."@hr ;
+            rdfs:label "Acqusition"@en ,
+                       "Akvizicija"@hr .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#ArhivskiOpis
+:ArhivskiOpis rdf:type owl:Class ;
+              rdfs:subClassOf :Postupak ;
+              rdfs:comment <http://www.ciscra.org/mat/mat/term/4515> ,
+                           "Postupak i proizvod postupka u obliku metapodataka o arhivskom gradivu ili obavijesnog pomagala."@hr ;
+              rdfs:label "Archival description"@en ,
+                         "Arhivski opis"@hr .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobina
+:CiljanaOsobina rdf:type owl:Class ;
+                rdfs:subClassOf :Osobina ;
+                rdfs:label "Ciljana osobina"@hr ,
+                           "Virtue"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaKojaVodiDoPravednogPonasanja
+:CiljanaOsobinaKojaVodiDoPravednogPonasanja rdf:type owl:Class ;
+                                            rdfs:subClassOf :CiljanaOsobina ;
+                                            owl:disjointWith :CiljanaOsobinaPovezanaSPravednimPonasanjem ;
+                                            rdfs:label "Ciljana osobina koja vodi do pravednog ponasanja"@hr ,
+                                                       "Virtue that leads to targeted bahavior"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#CiljanaOsobinaPovezanaSPravednimPonasanjem
+:CiljanaOsobinaPovezanaSPravednimPonasanjem rdf:type owl:Class ;
+                                            rdfs:subClassOf :CiljanaOsobina ;
+                                            rdfs:label "Ciljana osobina povezana s pravednim ponasanjem"@hr ,
+                                                       "Virtue linked to targeted behavior"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Koristenje
+:Koristenje rdf:type owl:Class ;
+            rdfs:subClassOf :Postupak ;
+            rdfs:label "Korištenje"@hr ,
+                       "Usage"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Osobina
+:Osobina rdf:type owl:Class ;
+         rdfs:label "Characteristic"@en ,
+                    "Osobina"@hr .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Ponasanje
+:Ponasanje rdf:type owl:Class ;
+           rdfs:label "Behavior"@en ,
+                      "Ponasanje"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak
+:Postupak rdf:type owl:Class ;
+          rdfs:label "Postupak"@hr ,
+                     "Process"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#PravednoPonasanje
+:PravednoPonasanje rdf:type owl:Class ;
+                   rdfs:subClassOf :Ponasanje .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Unistavanje
+:Unistavanje rdf:type owl:Class ;
+             rdfs:subClassOf :Postupak ;
+             rdfs:label "Destruction"@en ,
+                        "Uništavanje"@hr .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Vrednovanje
+:Vrednovanje rdf:type owl:Class ;
+             rdfs:subClassOf :Postupak ;
+             rdfs:comment <http://www.ciscra.org/mat/mat/term/4420> ,
+                          "Vrednovanje je postupak određivanja je li gradivo, nalazilo se ono u okolini stvaratelja, arhiva ili nekoj trećoj, vrijedno ili nije vrijedno i ako jest, koliko ta vrijednost očekivano traje."@hr ;
+             rdfs:label "Appraisal"@en ,
+                        "Vrednovanje"@hr .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Empaticnost
+:Empaticnost rdf:type owl:NamedIndividual ,
+                      :CiljanaOsobinaKojaVodiDoPravednogPonasanja ;
+             rdfs:comment "Osobina koja omogućuje razumijevanje pozicija Drugih."@hr ;
+             rdfs:label "Empathy"@en ,
+                        "Empatičnost"@hr ;
+             rdfs:seeAlso "Empatija"@hr .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Inkluzivnost
+:Inkluzivnost rdf:type owl:NamedIndividual ,
+                       :CiljanaOsobinaKojaVodiDoPravednogPonasanja ;
+              rdfs:comment "Uključivanje tema i problema važnih Drugima u svoj postupak te uključivanje Drugih u postupak, dijeljenje postupka."@hr ;
+              rdfs:label "Inclusivity"@en ,
+                         "Inkluzivnost"@hr .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Samorefleksivnost
+:Samorefleksivnost rdf:type owl:NamedIndividual ,
+                            :CiljanaOsobinaKojaVodiDoPravednogPonasanja ;
+                   rdfs:comment "Dijanoetička osobina svjesnosti značaja svojih postupaka, tema i problema."@hr ;
+                   rdfs:label "Samorefleksivnost"@hr ,
+                              "Self-reflexivity"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Transparentnost
+:Transparentnost rdf:type owl:NamedIndividual ,
+                          :CiljanaOsobinaPovezanaSPravednimPonasanjem ;
+                 rdfs:comment "Bilježenje postupaka i dokumentiranje, otvorenost za javnu diskusiju o postupku i ponašanju. Transparentnost rada i dokumentiranje postupaka osnova je odgovornosti i osnova za traženje legitimiteta."@hr ;
+                 rdfs:label "Transparency"@en ,
+                            "Transparentnost"@hr .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+owl:Thing rdfs:label "Stvar"@hr .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Axiom ;
+  owl:annotatedSource [ owl:intersectionOf ( :PravednoPonasanje
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty owl:topObjectProperty ;
+                                               owl:someValuesFrom [ owl:intersectionOf ( :CiljanaOsobinaKojaVodiDoPravednogPonasanja
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty :zadovoljeno ;
+                                                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                owl:oneOf [ rdf:type rdf:List ;
+                                                                                                                            rdf:first "true"^^xsd:boolean ;
+                                                                                                                            rdf:rest rdf:nil
+                                                                                                                          ]
+                                                                                                              ]
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ]
+                                             ]
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty owl:topObjectProperty ;
+                                               owl:someValuesFrom [ owl:intersectionOf ( :CiljanaOsobinaPovezanaSPravednimPonasanjem
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty :zadovoljeno ;
+                                                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                owl:oneOf [ rdf:type rdf:List ;
+                                                                                                                            rdf:first "true"^^xsd:boolean ;
+                                                                                                                            rdf:rest rdf:nil
+                                                                                                                          ]
+                                                                                                              ]
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ]
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class ;
+                        rdfs:subClassOf _:genid20
+                      ] ;
+  owl:annotatedProperty rdfs:subClassOf ;
+  owl:annotatedTarget _:genid20 ;
+  :DASE_RULE "R1___:PravednoPonasanje(?e) ^ :CiljanaOsobinaKojaVodiDoPravednogPonasanja(?a) ^ :CiljanaOsobinaKojaVodiDoPravednogPonasanja(?b) ^ :CiljanaOsobinaKojaVodiDoPravednogPonasanja(?c) ^ :CiljanaOsobinaPovezanaSPravednimPonasanjem(?d) ^ :zadovoljeno(?a, true) ^ :zadovoljeno(?b, true) ^ :zadovoljeno(?c, true) ^ :zadovoljeno(?d, true) -> :zadovoljeno(?e, true)___Ako su ciljane osobine koje vode do i koje su povezane s pravednim ponašanjem zadovoljene, onda je i pravedno ponašanje zadovoljeno.___http://www.w3.org/2002/07/owl#topObjectProperty"
+] .
+
+_:genid20 rdf:type owl:Restriction ;
+           owl:onProperty :zadovoljeno ;
+           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                owl:oneOf [ rdf:type rdf:List ;
+                                            rdf:first "true"^^xsd:boolean ;
+                                            rdf:rest rdf:nil
+                                          ]
+                              ] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Akvizicija
+                :ArhivskiOpis
+                :Koristenje
+                :Unistavanje
+                :Vrednovanje
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
