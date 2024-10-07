@@ -153,7 +153,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#ArhivskiOpis">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/3/untitled-ontology-48#Postupak"/>
         <rdfs:comment rdf:resource="http://www.ciscra.org/mat/mat/term/4515"/>
-        <rdfs:comment xml:lang="hr">Postupak i proizvod postupka u obliku metapodataka o arhivskom gradivu ili obavijesnog pomagala.</rdfs:comment>
+        <rdfs:comment xml:lang="hr">Postupak opisivanja arhivskog gradiva.</rdfs:comment>
         <rdfs:label xml:lang="en">Archival description</rdfs:label>
         <rdfs:label xml:lang="hr">Arhivski opis</rdfs:label>
     </owl:Class>
