@@ -1,1 +1,4 @@
-Za sada su modelirane glavne klase ontologije. Potrebno je dodati rdfs:comment elemente na individuale i, ako se ontologije neće spajatis  drugim ontologijama, potrebno je dodati rdfs:comment elemente (ontološke definicije) za glavne klase Ponašanje, Proces, Osobine.
+Za sada su modelirane glavne klase ontologije. 
+Potrebno je dodati rdfs:comment elemente na individuale i, 
+ako se ontologije neće spajatis  drugim ontologijama, 
+potrebno je dodati rdfs:comment elemente (ontološke definicije) za glavne klase Ponašanje, Proces, Osobine.
